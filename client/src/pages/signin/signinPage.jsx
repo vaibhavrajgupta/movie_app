@@ -20,11 +20,11 @@ const SignInPage = () => {
 				password,
 			});
 
-			dispatch(setUser(data.data.user))
+			dispatch(setUser(data.data.user));
+			console.log(data);
+			
 
-			// console.log(data.data.user);
-
-			navigate("/home");
+			if (data) navigate("/home");
 		} catch (error) {
 			console.log(error);
 		}

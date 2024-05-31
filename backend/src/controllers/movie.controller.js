@@ -13,8 +13,6 @@ export const getmovies = asyncHandler(async (req, res) => {
 			throw new ApiError(404, "Playlist not found");
 		}
 
-		console.log(playlist.movies);
-		
 		return res
 			.status(200)
 			.json(
