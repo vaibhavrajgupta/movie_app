@@ -9,6 +9,8 @@ export const verifyToken = asyncHandler(async (req, res, next) => {
 		const token = req.cookies.token;
 		const authorizationHeader = req.headers;
 
+		console.log(req.cookies);
+		
 		console.log(JSON.stringify(authorizationHeader) + "authorizationHeader");
 		// console.log(token);
 		// console.log(authorizationHeader.cookie);
