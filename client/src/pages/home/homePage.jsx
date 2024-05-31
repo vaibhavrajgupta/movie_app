@@ -14,7 +14,9 @@ const HomePage = () => {
 	useEffect(() => {
 		const getPlaylists = async () => {
 			try {
-				const userplaylist = await apiRequest.get("/playlist/getallplaylists");
+				const userplaylist = await apiRequest.get("/playlist/getallplaylists", {
+					withCredentials: true,
+				});
 				setPlaylists(userplaylist.data.data);
 			} catch (error) {
 				console.log(error);
