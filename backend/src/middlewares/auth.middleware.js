@@ -4,14 +4,14 @@ import { ApiError } from "../utils/ApiError.js";
 
 export const verifyToken = asyncHandler(async (req, res, next) => {
 	try {
-		console.log("HElooo hi bye bye");
+		// console.log("HElooo hi bye bye");
 
 		const token = req.cookies.token;
-		const authorizationHeader = req.headers;
+		// const authorizationHeader = req.headers;
 
-		console.log(JSON.stringify(req));
+		// console.log(JSON.stringify(req));
 		
-		console.log(JSON.stringify(authorizationHeader) + "authorizationHeader");
+		// console.log(JSON.stringify(authorizationHeader) + "authorizationHeader");
 		// console.log(token);
 		// console.log(authorizationHeader.cookie);
 
