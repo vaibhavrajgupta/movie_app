@@ -6,7 +6,9 @@ export const verifyToken = asyncHandler(async (req, res, next) => {
 	try {
 		
 		const token = req.cookies.token;
-		console.log(token);
+		const authorizationHeader = req.headers;
+		console.log(authorizationHeader);
+		
 
 		if (!token) throw new ApiError(401, "Unauthorized request");
 

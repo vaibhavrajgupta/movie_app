@@ -21,7 +21,6 @@ const SignInPage = () => {
 			});
 
 			dispatch(setUser(data.data.user));
-			console.log(data);
 			
 
 			if (data) navigate("/home");
