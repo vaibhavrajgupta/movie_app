@@ -4,11 +4,11 @@ import { ApiError } from "../utils/ApiError.js";
 
 export const verifyToken = asyncHandler(async (req, res, next) => {
 	try {
-		
+		console.log("HElooo hi bye bye");
+
 		const token = req.cookies.token;
 		const authorizationHeader = req.headers;
 		console.log(authorizationHeader);
-		
 
 		if (!token) throw new ApiError(401, "Unauthorized request");
 
