@@ -10,7 +10,7 @@ const router = Router();
 
 console.log("Playlist route hitted");
 
-router.use(verifyToken);
+// router.use(verifyToken);
 
 router.route("/getallplaylists").get(allplaylists);
 router.route("/create").post(create);
