@@ -12,6 +12,13 @@ This is a full-stack movie playlist application built with React on the frontend
 
 3. Start the backend server:
 
+### Configuration
+
+1. Create the dotenv file inside backend root directory.
+2. Then copy some values from .env.sample
+3. Copy DATABASE_URL from MongoDB Atlas server and put some random string for JWT_SECRET_KEY
+4. Then inside backend terminal run command "npm run dev".
+
 The backend server will be running on `http://localhost:3500`.
 
 ### Frontend Setup
@@ -20,7 +27,7 @@ The backend server will be running on `http://localhost:3500`.
 
 2. Install dependencies:
 
-3. Start the frontend development server:
+3. Start the frontend development server: by running command "npm run dev'.
 
 The frontend application will be running on `http://localhost:5173`.
 
@@ -30,13 +37,10 @@ The frontend application will be running on `http://localhost:5173`.
 2. Sign in or sign up to create an account.
 3. Once logged in, you can create playlists, add movies to your playlists, and explore existing playlists.
 
-## API Endpoints
 
-For detailed information about the API endpoints, please refer to the documentation in the backend code.
-
-## Configuration
 
 ### Environment Variables
 
 Create a `.env` file in the `backend` directory with the following environment variables:
+
 
