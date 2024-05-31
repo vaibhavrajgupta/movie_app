@@ -6,7 +6,6 @@ import { Playlist } from "../models/playlist.model.js";
 export const getmovies = asyncHandler(async (req, res) => {
 	try {
 		const playlistId = req.params.id;
-		console.log(`Fetching movies for playlist ID: ${playlistId}`);
 
 		const playlist = await Playlist.findById(playlistId).select('movies');
 		if (!playlist) {

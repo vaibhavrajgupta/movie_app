@@ -7,8 +7,8 @@ import { Playlist } from "../models/playlist.model.js";
 export const allplaylists = asyncHandler(async (req, res) => {
 	try {
 		const userId = req.userId;
-		console.log(userId);
 		const playlists = await User.findById(userId).populate("playlists");
+
 		return res
 			.status(200)
 			.json(
@@ -61,7 +61,7 @@ export const remove = asyncHandler(async (req, res) => {
 
 		if (!playlist) throw new ApiError(404, "Playlist not found !!!!1");
 
-		await User.updateOne({ _id: req.userId }, { $pull: { playlists: playlistId } });
+		
 
 		return res
 			.status(200)
