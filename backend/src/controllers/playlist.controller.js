@@ -7,8 +7,8 @@ import { Playlist } from "../models/playlist.model.js";
 export const allplaylists = asyncHandler(async (req, res) => {
 	try {
 		const userId = req.userId;
-		const playlists = await User.findById(userId).populate("playlists");
 		console.log(userId);
+		const playlists = await User.findById(userId).populate("playlists");
 		return res
 			.status(200)
 			.json(
