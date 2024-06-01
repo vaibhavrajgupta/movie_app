@@ -27,10 +27,10 @@ const SearchList = () => {
 	const [playlists, setPlaylists] = useState([]);
 	let getplaylist;
 
-	const handleClick = async (imdbID, playlistId) => {
+	const handleClick = async (imdbID, playlistId, name) => {
 		try {
 			await apiRequest.post(`/movie/${playlistId}/${imdbID}`);
-			alert("Movie is added to the playlist");
+			alert(`Movie is added to the ${name} playlist`);
 		} catch (error) {
 			console.log(error);
 		}
@@ -103,7 +103,7 @@ const SearchList = () => {
 														{({ focus }) => (
 															<button
 																onClick={() =>
-																	handleClick(movie.imdbID, list._id)
+																	handleClick(movie.imdbID, list._id, list.name)
 																}
 																className={classNames(
 																	focus

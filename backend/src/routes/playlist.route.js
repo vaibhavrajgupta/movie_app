@@ -8,7 +8,6 @@ import {
 
 const router = Router();
 
-console.log("Playlist route hitted");
 
 router.use(verifyToken);
 
